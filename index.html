@@ -22,7 +22,16 @@
 
     /* SECTIONS */
     section{max-width:1100px;margin:80px auto;padding:0 20px;} 
-    h2{font-size:34px;margin-bottom:20px;border-left:6px solid #7bdcff;padding-left:12px;font-weight:600;}
+    h2{font-size:34px;margin-bottom:10px;border-left:6px solid #7bdcff;padding-left:12px;font-weight:600;}
+
+    /* SUBTÍTULO */
+    .subtitulo-projetos{
+      color:#bfbfbf;
+      margin-bottom:25px;
+      margin-left:6px;
+      font-size:16px;
+      opacity:.85;
+    }
 
     /* GRID */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
@@ -31,11 +40,12 @@
     .skill{background:#1c1d21;padding:18px;border-radius:12px;text-align:center;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.35);}    
 
     /* PROJECTS */
-    .project{background:#1c1d21;border-radius:14px;overflow:hidden;box-shadow:0 4px 22px rgba(0,0,0,0.35);transition:.3s;} 
+    .project-link{display:block;text-decoration:none;color:inherit;}
+    .project{background:#1c1d21;border-radius:14px;overflow:hidden;box-shadow:0 4px 22px rgba(0,0,0,0.35);transition:.3s;cursor:pointer;} 
     .project:hover{transform:translateY(-6px);} 
     .project img{width:100%;height:200px;object-fit:cover;}    
     .project .info{padding:18px;}    
-    .project h3{margin-bottom:6px;font-size:20px;}
+    .project h3{margin-bottom:6px;font-size:20px;color:#fff;}
 
     /* CONTACT */
     .contact-buttons{margin-top:25px;display:flex;gap:20px;} 
@@ -83,30 +93,40 @@
 
   <section id="projetos">
     <h2>Projetos</h2>
+    <p class="subtitulo-projetos">Clique em um dos cards para ver mais detalhes.</p>
+
     <div class="grid">
-      <div class="project">
-        <img src="https://i.ytimg.com/vi/Fzc_dnqD-V0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDNYP1i0Ys64QA1R6taVOv_yVNePg" />
-        <div class="info">
-          <h3>Landing Page Completa</h3>
-          <p>Página focada em conversão com animações, responsividade e formulário funcional.</p>
-        </div>
-      </div>
 
-      <div class="project">
-        <img src="https://i.ytimg.com/vi/Eq8owqFtx3s/maxresdefault.jpg" />
-        <div class="info">
-          <h3>Formulário Multi-Etapas</h3>
-          <p>Formulário interativo criado com JavaScript, incluindo animações e barras de progresso.</p>
+      <a href="projeto-landingpage.html" class="project-link">
+        <div class="project">
+          <img src="https://i.ytimg.com/vi/Fzc_dnqD-V0/hq720.jpg" />
+          <div class="info">
+            <h3>Landing Page Completa</h3>
+            <p>Página focada em conversão com animações, responsividade e formulário funcional.</p>
+          </div>
         </div>
-      </div>
+      </a>
 
-      <div class="project">
-        <img src="https://www.cdsconsulting.com.br/wp-content/uploads/2024/06/xg-site-institucional-sucesso.jpg" />
-        <div class="info">
-          <h3>Site Institucional</h3>
-          <p>Website moderno para empresa fictícia com navegação intuitiva.</p>
+      <a href="projeto-formulario.html" class="project-link">
+        <div class="project">
+          <img src="https://i.ytimg.com/vi/Eq8owqFtx3s/maxresdefault.jpg" />
+          <div class="info">
+            <h3>Formulário Multi-Etapas</h3>
+            <p>Formulário interativo criado com JavaScript, incluindo animações e barras de progresso.</p>
+          </div>
         </div>
-      </div>
+      </a>
+
+      <a href="projeto-institucional.html" class="project-link">
+        <div class="project">
+          <img src="https://www.cdsconsulting.com.br/wp-content/uploads/2024/06/xg-site-institucional-sucesso.jpg" />
+          <div class="info">
+            <h3>Site Institucional</h3>
+            <p>Website moderno para empresa fictícia com navegação intuitiva.</p>
+          </div>
+        </div>
+      </a>
+
     </div>
   </section>
 
