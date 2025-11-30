@@ -3,205 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas Gabriel Gaviti Luz - Portfólio</title>
+  <title>Lucas Gaviti - Desenvolvedor Front-End</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#0f0f11;color:#e3e3e3;overflow-x:hidden;}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0f0f11;
-      color: #e3e3e3;
-      overflow-x: hidden;
-    }
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;background:rgba(20,20,20,0.92);backdrop-filter:blur(6px);padding:16px 30px;z-index:999;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 10px rgba(0,0,0,0.4);}    
+    nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:16px;transition:0.2s;}    
+    nav a:hover{color:#7bdcff;}
 
-    /* ===== NAVBAR ===== */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(20,20,20,0.92);
-      backdrop-filter: blur(6px);
-      padding: 16px 30px;
-      z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
+    /* HEADER */
+    header{text-align:center;padding:120px 20px 80px;background:linear-gradient(135deg,#111,#1d1d1d,#17181d);}    
+    header h1{font-size:48px;font-weight:700;} 
+    header p{margin-top:10px;font-size:20px;opacity:.9;}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 22px;
-      font-size: 16px;
-      transition: 0.2s;
-    }
-    nav a:hover { color: #7bdcff; }
+    /* SECTIONS */
+    section{max-width:1100px;margin:80px auto;padding:0 20px;} 
+    h2{font-size:34px;margin-bottom:20px;border-left:6px solid #7bdcff;padding-left:12px;font-weight:600;}
 
-    /* ===== HEADER ===== */
-    header {
-      padding: 120px 20px 80px;
-      text-align: center;
-      background: linear-gradient(135deg,#111,#1d1d1d,#17181d);
-      animation: fadeIn 1.2s ease-out;
-    }
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
 
-    header h1 { font-size: 48px; font-weight: 700; }
-    header p { font-size: 20px; opacity: 0.9; }
+    /* SKILLS */
+    .skill{background:#1c1d21;padding:18px;border-radius:12px;text-align:center;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.35);}    
 
-    /* ===== SECTIONS ===== */
-    section {
-      max-width: 1100px;
-      margin: 80px auto;
-      padding: 0 20px;
-      animation: fadeUp 1s ease-out;
-    }
+    /* PROJECTS */
+    .project{background:#1c1d21;border-radius:14px;overflow:hidden;box-shadow:0 4px 22px rgba(0,0,0,0.35);transition:.3s;} 
+    .project:hover{transform:translateY(-6px);} 
+    .project img{width:100%;height:200px;object-fit:cover;}    
+    .project .info{padding:18px;}    
+    .project h3{margin-bottom:6px;font-size:20px;}
 
-    h2 {
-      font-size: 34px;
-      margin-bottom: 20px;
-      border-left: 6px solid #7bdcff;
-      padding-left: 12px;
-      font-weight: 600;
-    }
+    /* CONTACT */
+    .contact-buttons{margin-top:25px;display:flex;gap:20px;} 
+    .btn{padding:14px 26px;border-radius:10px;text-decoration:none;font-size:18px;font-weight:600;transition:.3s;}    
+    .btn-whats{background:#25d366;color:black;} 
+    .btn-email{background:#7bdcff;color:black;} 
+    .btn:hover{transform:scale(1.05);} 
 
-    /* ===== GRID / CARDS ===== */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #1c1d21;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 22px rgba(0,0,0,0.35);
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.5);
-    }
-
-    /* ===== PROJECTS ===== */
-    .project img {
-      width: 100%; height: 200px; object-fit: cover; border-radius: 10px 10px 0 0;
-    }
-    .project .info { padding: 18px; }
-    .project h3 { margin-bottom: 8px; font-size: 20px; }
-
-    /* ===== TESTIMONIALS ===== */
-    .testimonial {
-      background: #1b1c20;
-      padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(255,255,255,0.05);
-    }
-    .testimonial p { font-style: italic; opacity: 0.9; }
-    .testimonial h4 { margin-top: 14px; font-size: 18px; color: #7bdcff; }
-
-    /* ===== CONTACT BUTTON ===== */
-    .contact-buttons { margin-top: 25px; display: flex; gap: 20px; }
-    .btn {
-      padding: 14px 26px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .btn-whats { background: #25d366; color: black; }
-    .btn-email { background: #7bdcff; color: black; }
-
-    .btn:hover { transform: scale(1.05); }
-
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 22px;
-      color: #aaa;
-      margin-top: 80px;
-    }
-
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeUp { from {opacity:0; transform:translateY(40px);} to {opacity:1; transform:translateY(0);} }
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    footer{text-align:center;padding:22px;margin-top:80px;color:#aaa;} 
   </style>
 </head>
 <body>
 
   <nav>
-    <div style="font-weight:700; font-size:18px;">Lucas Gaviti</div>
+    <div style="font-weight:700;font-size:18px;">Lucas Gaviti</div>
     <div>
       <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
+      <a href="#skills">Skills</a>
       <a href="#projetos">Projetos</a>
-      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </div>
   </nav>
 
   <header>
-    <h1>Lucas Gabriel Gaviti Luz</h1>
-    <p>Desenvolvedor • Designer Gráfico • Editor de Vídeos</p>
+    <h1>Lucas Gaviti</h1>
+    <p>Desenvolvedor Front-End • HTML • CSS • JavaScript</p>
   </header>
 
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou um profissional completo em desenvolvimento web, design gráfico e edição de vídeos. Crio projetos modernos, profissionais e pensados para resultados.</p>
+    <p>Sou desenvolvedor front-end focado na criação de interfaces modernas, rápidas e responsivas. Construo landing pages, sites completos e componentes interativos utilizando HTML, CSS e JavaScript. Também aplico noções de UI/UX para entregar projetos funcionais e agradáveis.</p>
   </section>
 
-  <section id="servicos">
-    <h2>Serviços</h2>
+  <section id="skills">
+    <h2>Skills</h2>
     <div class="grid">
-      <div class="card">💻 Desenvolvimento de Sites</div>
-      <div class="card">⚡ Landing Pages Otimizadas</div>
-      <div class="card">🎨 Identidade Visual</div>
-      <div class="card">📸 Artes e Thumbnails</div>
-      <div class="card">🎬 Edição de Vídeos</div>
-      <div class="card">⚙️ Automação e Scripts</div>
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsividade</div>
+      <div class="skill">UI/UX Básico</div>
+      <div class="skill">Versionamento Git</div>
     </div>
   </section>
 
   <section id="projetos">
     <h2>Projetos</h2>
     <div class="grid">
-
-      <div class="card project">
-        <img src="https://vianapatricio.com.br/wp-content/uploads/2018/07/wordpress-site-viana-patricio.png" />
-        <div class="info"><h3>Website Moderno</h3><p>Site institucional com layout limpo e responsivo.</p></div>
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/Fzc_dnqD-V0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDNYP1i0Ys64QA1R6taVOv_yVNePg" />
+        <div class="info">
+          <h3>Landing Page Completa</h3>
+          <p>Página focada em conversão com animações, responsividade e formulário funcional.</p>
+        </div>
       </div>
 
-      <div class="card project">
-        <img src="https://img.elo7.com.br/product/main/50EF9AB/pack-5-artes-profissionais-instagram-e-facebook-marketing.jpg" />
-        <div class="info"><h3>Artes Profissionais</h3><p>Posts criativos e branding completo.</p></div>
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/Eq8owqFtx3s/maxresdefault.jpg" />
+        <div class="info">
+          <h3>Formulário Multi-Etapas</h3>
+          <p>Formulário interativo criado com JavaScript, incluindo animações e barras de progresso.</p>
+        </div>
       </div>
 
-      <div class="card project">
-        <img src="https://blog.ebaconline.com.br/blog/wp-content/uploads/2022/12/shutterstock_1734380-e1674741985949.png" />
-        <div class="info"><h3>Edição de Vídeo</h3><p>Edição com cortes dinâmicos e color grading.</p></div>
+      <div class="project">
+        <img src="https://www.cdsconsulting.com.br/wp-content/uploads/2024/06/xg-site-institucional-sucesso.jpg" />
+        <div class="info">
+          <h3>Site Institucional</h3>
+          <p>Website moderno para empresa fictícia com navegação intuitiva.</p>
+        </div>
       </div>
-
-      <div class="card project">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEWtbfETAUbrP_SOzz5xEwLIVTyTi1QHjKDQ&s" />
-        <div class="info"><h3>Landing Page Completa</h3><p>Página otimizada focada em conversão.</p></div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="depoimentos">
-    <h2>Depoimentos</h2>
-    <div class="grid">
-      <div class="testimonial"><p>“Trabalho impecável! Entregou muito acima do esperado.”</p><h4>— Ana M.</h4></div>
-      <div class="testimonial"><p>“Profissional rápido, criativo e muito atencioso. Recomendo!”</p><h4>— Carlos R.</h4></div>
-      <div class="testimonial"><p>“Meu site ficou lindo e super profissional. 5 estrelas!”</p><h4>— Júlia S.</h4></div>
     </div>
   </section>
 
@@ -216,7 +121,134 @@
     </div>
   </section>
 
-  <footer>© 2025 - Portfólio de Lucas Gaviti</footer>
+  <footer>© 2025 - Portfólio Desenvolvedor Front-End — Lucas Gaviti</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Gaviti - Desenvolvedor Front-End</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#0f0f11;color:#e3e3e3;overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;background:rgba(20,20,20,0.92);backdrop-filter:blur(6px);padding:16px 30px;z-index:999;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 10px rgba(0,0,0,0.4);}    
+    nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:16px;transition:0.2s;}    
+    nav a:hover{color:#7bdcff;}
+
+    /* HEADER */
+    header{text-align:center;padding:120px 20px 80px;background:linear-gradient(135deg,#111,#1d1d1d,#17181d);}    
+    header h1{font-size:48px;font-weight:700;} 
+    header p{margin-top:10px;font-size:20px;opacity:.9;}
+
+    /* SECTIONS */
+    section{max-width:1100px;margin:80px auto;padding:0 20px;} 
+    h2{font-size:34px;margin-bottom:20px;border-left:6px solid #7bdcff;padding-left:12px;font-weight:600;}
+
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+
+    /* SKILLS */
+    .skill{background:#1c1d21;padding:18px;border-radius:12px;text-align:center;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.35);}    
+
+    /* PROJECTS */
+    .project{background:#1c1d21;border-radius:14px;overflow:hidden;box-shadow:0 4px 22px rgba(0,0,0,0.35);transition:.3s;} 
+    .project:hover{transform:translateY(-6px);} 
+    .project img{width:100%;height:200px;object-fit:cover;}    
+    .project .info{padding:18px;}    
+    .project h3{margin-bottom:6px;font-size:20px;}
+
+    /* CONTACT */
+    .contact-buttons{margin-top:25px;display:flex;gap:20px;} 
+    .btn{padding:14px 26px;border-radius:10px;text-decoration:none;font-size:18px;font-weight:600;transition:.3s;}    
+    .btn-whats{background:#25d366;color:black;} 
+    .btn-email{background:#7bdcff;color:black;} 
+    .btn:hover{transform:scale(1.05);} 
+
+    footer{text-align:center;padding:22px;margin-top:80px;color:#aaa;} 
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight:700;font-size:18px;">Lucas Gaviti</div>
+    <div>
+      <a href="#sobre">Sobre</a>
+      <a href="#skills">Skills</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Lucas Gaviti</h1>
+    <p>Desenvolvedor Front-End • HTML • CSS • JavaScript</p>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou desenvolvedor front-end focado na criação de interfaces modernas, rápidas e responsivas. Construo landing pages, sites completos e componentes interativos utilizando HTML, CSS e JavaScript. Também aplico noções de UI/UX para entregar projetos funcionais e agradáveis.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsividade</div>
+      <div class="skill">UI/UX Básico</div>
+      <div class="skill">Versionamento Git</div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/Fzc_dnqD-V0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDNYP1i0Ys64QA1R6taVOv_yVNePg" />
+        <div class="info">
+          <h3>Landing Page Completa</h3>
+          <p>Página focada em conversão com animações, responsividade e formulário funcional.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/Eq8owqFtx3s/maxresdefault.jpg" />
+        <div class="info">
+          <h3>Formulário Multi-Etapas</h3>
+          <p>Formulário interativo criado com JavaScript, incluindo animações e barras de progresso.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://www.cdsconsulting.com.br/wp-content/uploads/2024/06/xg-site-institucional-sucesso.jpg" />
+        <div class="info">
+          <h3>Site Institucional</h3>
+          <p>Website moderno para empresa fictícia com navegação intuitiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: <strong>lucasgaviti@gmail.com</strong></p>
+    <p>WhatsApp: <strong>+55 11 97065-5548</strong></p>
+
+    <div class="contact-buttons">
+      <a class="btn btn-whats" href="https://wa.me/5511970655548" target="_blank">Enviar WhatsApp</a>
+      <a class="btn btn-email" href="mailto:lucasgaviti@gmail.com">Enviar Email</a>
+    </div>
+  </section>
+
+  <footer>© 2025 - Portfólio Desenvolvedor Front-End — Lucas Gaviti</footer>
 
 </body>
 </html>
