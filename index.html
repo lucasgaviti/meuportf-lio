@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Gaviti - Desenvolvedor Front-End</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#0f0f11;color:#e3e3e3;overflow-x:hidden;}
+
+    /* NAV */
+    nav{position:fixed;top:0;width:100%;background:rgba(20,20,20,0.92);backdrop-filter:blur(6px);padding:16px 30px;z-index:999;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 10px rgba(0,0,0,0.4);}    
+    nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:16px;transition:0.2s;}    
+    nav a:hover{color:#7bdcff;}
+
+    /* HEADER */
+    header{text-align:center;padding:120px 20px 80px;background:linear-gradient(135deg,#111,#1d1d1d,#17181d);}    
+    header h1{font-size:48px;font-weight:700;} 
+    header p{margin-top:10px;font-size:20px;opacity:.9;}
+
+    /* SECTIONS */
+    section{max-width:1100px;margin:80px auto;padding:0 20px;} 
+    h2{font-size:34px;margin-bottom:20px;border-left:6px solid #7bdcff;padding-left:12px;font-weight:600;}
+
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+
+    /* SKILLS */
+    .skill{background:#1c1d21;padding:18px;border-radius:12px;text-align:center;font-weight:600;box-shadow:0 4px 20px rgba(0,0,0,0.35);}    
+
+    /* PROJECTS */
+    .project{background:#1c1d21;border-radius:14px;overflow:hidden;box-shadow:0 4px 22px rgba(0,0,0,0.35);transition:.3s;} 
+    .project:hover{transform:translateY(-6px);} 
+    .project img{width:100%;height:200px;object-fit:cover;}    
+    .project .info{padding:18px;}    
+    .project h3{margin-bottom:6px;font-size:20px;}
+
+    /* CONTACT */
+    .contact-buttons{margin-top:25px;display:flex;gap:20px;} 
+    .btn{padding:14px 26px;border-radius:10px;text-decoration:none;font-size:18px;font-weight:600;transition:.3s;}    
+    .btn-whats{background:#25d366;color:black;} 
+    .btn-email{background:#7bdcff;color:black;} 
+    .btn:hover{transform:scale(1.05);} 
+
+    footer{text-align:center;padding:22px;margin-top:80px;color:#aaa;} 
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight:700;font-size:18px;">Lucas Gaviti</div>
+    <div>
+      <a href="#sobre">Sobre</a>
+      <a href="#skills">Skills</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Lucas Gaviti</h1>
+    <p>Desenvolvedor Front-End • HTML • CSS • JavaScript</p>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou desenvolvedor front-end focado na criação de interfaces modernas, rápidas e responsivas. Construo landing pages, sites completos e componentes interativos utilizando HTML, CSS e JavaScript. Também aplico noções de UI/UX para entregar projetos funcionais e agradáveis.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsividade</div>
+      <div class="skill">UI/UX Básico</div>
+      <div class="skill">Versionamento Git</div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="grid">
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/Fzc_dnqD-V0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDNYP1i0Ys64QA1R6taVOv_yVNePg" />
+        <div class="info">
+          <h3>Landing Page Completa</h3>
+          <p>Página focada em conversão com animações, responsividade e formulário funcional.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://i.ytimg.com/vi/Eq8owqFtx3s/maxresdefault.jpg" />
+        <div class="info">
+          <h3>Formulário Multi-Etapas</h3>
+          <p>Formulário interativo criado com JavaScript, incluindo animações e barras de progresso.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://www.cdsconsulting.com.br/wp-content/uploads/2024/06/xg-site-institucional-sucesso.jpg" />
+        <div class="info">
+          <h3>Site Institucional</h3>
+          <p>Website moderno para empresa fictícia com navegação intuitiva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: <strong>lucasgaviti@gmail.com</strong></p>
+    <p>WhatsApp: <strong>+55 11 97065-5548</strong></p>
+
+    <div class="contact-buttons">
+      <a class="btn btn-whats" href="https://wa.me/5511970655548" target="_blank">Enviar WhatsApp</a>
+      <a class="btn btn-email" href="mailto:lucasgaviti@gmail.com">Enviar Email</a>
+    </div>
+  </section>
+
+  <footer>© 2025 - Portfólio Desenvolvedor Front-End — Lucas Gaviti</footer>
+
+</body>
+</html>
